@@ -1,0 +1,727 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>tether (v1.4.0)</a>
+</h1>
+<h4>A client-side library to make absolutely positioned elements attach to elements in the page efficiently.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.tether">module tether</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.tether">
+            function <span class="apidocSignatureSpan"></span>tether
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.position">
+            function <span class="apidocSignatureSpan">tether.</span>position
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tether.</span>Utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tether.</span>modules</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.tether.Utils">module tether.Utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.Evented">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>Evented
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.addClass">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>addClass
+            <span class="apidocSignatureSpan">(el, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.defer">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>defer
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.extend">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>extend
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.flush">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>flush
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.getActualBoundingClientRect">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>getActualBoundingClientRect
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.getBounds">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>getBounds
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.getOffsetParent">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>getOffsetParent
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.getScrollBarSize">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>getScrollBarSize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.getScrollParents">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>getScrollParents
+            <span class="apidocSignatureSpan">(el)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.hasClass">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>hasClass
+            <span class="apidocSignatureSpan">(el, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.removeClass">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>removeClass
+            <span class="apidocSignatureSpan">(el, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.removeUtilElements">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>removeUtilElements
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.uniqueId">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>uniqueId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tether.Utils.updateClasses">
+            function <span class="apidocSignatureSpan">tether.Utils.</span>updateClasses
+            <span class="apidocSignatureSpan">(el, add, all)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.tether" id="apidoc.module.tether">module tether</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.tether.tether" id="apidoc.element.tether.tether">
+        function <span class="apidocSignatureSpan"></span>tether
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TetherClass(options) {
+  var _this = this;
+
+  _classCallCheck(this, TetherClass);
+
+  _get(Object.getPrototypeOf(TetherClass.prototype), 'constructor', this).call(this);
+  this.position = this.position.bind(this);
+
+  tethers.push(this);
+
+  this.history = [];
+
+  this.setOptions(options, false);
+
+  TetherBase.modules.forEach(function (module) {
+    if (typeof module.initialize !== 'undefined') {
+      module.initialize.call(_this);
+    }
+  });
+
+  this.position();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.position" id="apidoc.element.tether.position">
+        function <span class="apidocSignatureSpan">tether.</span>position
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function position() {
+  tethers.forEach(function (tether) {
+    tether.position(false);
+  });
+  flush();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+})();
+
+const tethers = [];
+
+const position = () =&gt; {
+tethers.forEach(tether =&gt; {
+  tether.<span class="apidocCodeKeywordSpan">position</span>(false);
+});
+flush();
+};
+
+function now() {
+if (typeof performance !== 'undefined' &amp;&amp; typeof performance.now !== 'undefined') {
+  return performance.now();
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.tether.Utils" id="apidoc.module.tether.Utils">module tether.Utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.Evented" id="apidoc.element.tether.Utils.Evented">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>Evented
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Evented() {
+  _classCallCheck(this, Evented);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.addClass" id="apidoc.element.tether.Utils.addClass">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>addClass
+        <span class="apidocSignatureSpan">(el, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addClass(el, name) {
+  if (typeof el.classList !== 'undefined') {
+    name.split(' ').forEach(function (cls) {
+      if (cls.trim()) {
+        el.classList.add(cls);
+      }
+    });
+  } else {
+    removeClass(el, name);
+    var cls = getClassName(el) + (' ' + name);
+    setClassName(el, cls);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.defer" id="apidoc.element.tether.Utils.defer">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>defer
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defer(fn) {
+  deferred.push(fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.extend" id="apidoc.element.tether.Utils.extend">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>extend
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend() {
+  var out = arguments.length &lt;= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+  var args = [];
+
+  Array.prototype.push.apply(args, arguments);
+
+  args.slice(1).forEach(function (obj) {
+    if (obj) {
+      for (var key in obj) {
+        if (({}).hasOwnProperty.call(obj, key)) {
+          out[key] = obj[key];
+        }
+      }
+    }
+  });
+
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.flush" id="apidoc.element.tether.Utils.flush">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>flush
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flush() {
+  var fn = undefined;
+  while (fn = deferred.pop()) {
+    fn();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.getActualBoundingClientRect" id="apidoc.element.tether.Utils.getActualBoundingClientRect">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>getActualBoundingClientRect
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getActualBoundingClientRect(node) {
+  var boundingRect = node.getBoundingClientRect();
+
+  // The original object returned by getBoundingClientRect is immutable, so we clone it
+  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
+  var rect = {};
+  for (var k in boundingRect) {
+    rect[k] = boundingRect[k];
+  }
+
+  if (node.ownerDocument !== document) {
+    var _frameElement = node.ownerDocument.defaultView.frameElement;
+    if (_frameElement) {
+      var frameRect = getActualBoundingClientRect(_frameElement);
+      rect.top += frameRect.top;
+      rect.bottom += frameRect.top;
+      rect.left += frameRect.left;
+      rect.right += frameRect.left;
+    }
+  }
+
+  return rect;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.getBounds" id="apidoc.element.tether.Utils.getBounds">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>getBounds
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getBounds(el) {
+  var doc = undefined;
+  if (el === document) {
+    doc = document;
+    el = document.documentElement;
+  } else {
+    doc = el.ownerDocument;
+  }
+
+  var docEl = doc.documentElement;
+
+  var box = getActualBoundingClientRect(el);
+
+  var origin = getOrigin();
+
+  box.top -= origin.top;
+  box.left -= origin.left;
+
+  if (typeof box.width === 'undefined') {
+    box.width = document.body.scrollWidth - box.left - box.right;
+  }
+  if (typeof box.height === 'undefined') {
+    box.height = document.body.scrollHeight - box.top - box.bottom;
+  }
+
+  box.top = box.top - docEl.clientTop;
+  box.left = box.left - docEl.clientLeft;
+  box.right = doc.body.clientWidth - box.width - box.left;
+  box.bottom = doc.body.clientHeight - box.height - box.top;
+
+  return box;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.getOffsetParent" id="apidoc.element.tether.Utils.getOffsetParent">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>getOffsetParent
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getOffsetParent(el) {
+  return el.offsetParent || document.documentElement;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.getScrollBarSize" id="apidoc.element.tether.Utils.getScrollBarSize">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>getScrollBarSize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getScrollBarSize() {
+  if (_scrollBarSize) {
+    return _scrollBarSize;
+  }
+  var inner = document.createElement('div');
+  inner.style.width = '100%';
+  inner.style.height = '200px';
+
+  var outer = document.createElement('div');
+  extend(outer.style, {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    pointerEvents: 'none',
+    visibility: 'hidden',
+    width: '200px',
+    height: '150px',
+    overflow: 'hidden'
+  });
+
+  outer.appendChild(inner);
+
+  document.body.appendChild(outer);
+
+  var widthContained = inner.offsetWidth;
+  outer.style.overflow = 'scroll';
+  var widthScroll = inner.offsetWidth;
+
+  if (widthContained === widthScroll) {
+    widthScroll = outer.clientWidth;
+  }
+
+  document.body.removeChild(outer);
+
+  var width = widthContained - widthScroll;
+
+  _scrollBarSize = { width: width, height: width };
+  return _scrollBarSize;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.getScrollParents" id="apidoc.element.tether.Utils.getScrollParents">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>getScrollParents
+        <span class="apidocSignatureSpan">(el)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getScrollParents(el) {
+  // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+  var computedStyle = getComputedStyle(el) || {};
+  var position = computedStyle.position;
+  var parents = [];
+
+  if (position === 'fixed') {
+    return [el];
+  }
+
+  var parent = el;
+  while ((parent = parent.parentNode) &amp;&amp; parent &amp;&amp; parent.nodeType === 1) {
+    var style = undefined;
+    try {
+      style = getComputedStyle(parent);
+    } catch (err) {}
+
+    if (typeof style === 'undefined' || style === null) {
+      parents.push(parent);
+      return parents;
+    }
+
+    var _style = style;
+    var overflow = _style.overflow;
+    var overflowX = _style.overflowX;
+    var overflowY = _style.overflowY;
+
+    if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
+      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) &gt;= 0) {
+        parents.push(parent);
+      }
+    }
+  }
+
+  parents.push(el.ownerDocument.body);
+
+  // If the node is within a frame, account for the parent window scroll
+  if (el.ownerDocument !== document) {
+    parents.push(el.ownerDocument.defaultView);
+  }
+
+  return parents;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.hasClass" id="apidoc.element.tether.Utils.hasClass">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>hasClass
+        <span class="apidocSignatureSpan">(el, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasClass(el, name) {
+  if (typeof el.classList !== 'undefined') {
+    return el.classList.contains(name);
+  }
+  var className = getClassName(el);
+  return new RegExp('(^| )' + name + '( |$)', 'gi').test(className);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.removeClass" id="apidoc.element.tether.Utils.removeClass">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>removeClass
+        <span class="apidocSignatureSpan">(el, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeClass(el, name) {
+  if (typeof el.classList !== 'undefined') {
+    name.split(' ').forEach(function (cls) {
+      if (cls.trim()) {
+        el.classList.remove(cls);
+      }
+    });
+  } else {
+    var regex = new RegExp('(^| )' + name.split(' ').join('|') + '( |$)', 'gi');
+    var className = getClassName(el).replace(regex, ' ');
+    setClassName(el, className);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.removeUtilElements" id="apidoc.element.tether.Utils.removeUtilElements">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>removeUtilElements
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeUtilElements() {
+  if (zeroElement) {
+    document.body.removeChild(zeroElement);
+  }
+  zeroElement = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.uniqueId" id="apidoc.element.tether.Utils.uniqueId">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>uniqueId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uniqueId = function () {
+  return ++id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tether.Utils.updateClasses" id="apidoc.element.tether.Utils.updateClasses">
+        function <span class="apidocSignatureSpan">tether.Utils.</span>updateClasses
+        <span class="apidocSignatureSpan">(el, add, all)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateClasses(el, add, all) {
+  // Of the set of 'all' classes, we need the 'add' classes, and only the
+  // 'add' classes to be set.
+  all.forEach(function (cls) {
+    if (add.indexOf(cls) === -1 &amp;&amp; hasClass(el, cls)) {
+      removeClass(el, cls);
+    }
+  });
+
+  add.forEach(function (cls) {
+    if (!hasClass(el, cls)) {
+      addClass(el, cls);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
